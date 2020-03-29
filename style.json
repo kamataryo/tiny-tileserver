@@ -2,7 +2,10 @@
   "version": 8,
   "name": "Tiny Tile Server",
   "metadata": {},
-  "center": [139.691706, 35.689488],
+  "center": [
+    139.691706,
+    35.689488
+  ],
   "zoom": 5,
   "sources": {
     "naturalearth": {
@@ -25,18 +28,539 @@
       }
     },
     {
-      "id": "land",
+      "id": "ne_110m_populated_places",
       "source": "naturalearth",
-      "source-layer": "ne_110m_admin_0_countries",
+      "source-layer": "ne_110m_populated_places",
+      "type": "symbol",
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2
+      },
+      "layout": {
+        "text-field": "{name_ja}\n{NAME}",
+        "text-font": [
+          "Noto Sans CJK JP Regular"
+        ],
+        "text-size": 14,
+        "text-anchor": "center",
+        "text-max-width": 10,
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-allow-overlap": false
+      }
+    },
+    {
+      "id": "ne_110m_admin_0_countries_lakes",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_0_countries_lakes",
       "type": "fill",
-      "filter": ["==", "$type", "Polygon"],
       "layout": {
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgba(209, 209, 209, 1)",
-        "fill-antialias": true
+        "fill-color": "rgba(71, 80, 61, 1)"
       }
+    },
+    {
+      "id": "ne_110m_admin_0_boundary_lines_land",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_0_boundary_lines_land",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_admin_0_countries",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_0_countries",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_admin_0_map_units",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_0_map_units",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_admin_0_pacific_groupings",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_0_pacific_groupings",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_admin_0_scale_rank",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_0_scale_rank",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_admin_0_sovereignty",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_0_sovereignty",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_admin_0_tiny_countries",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_0_tiny_countries",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_admin_1_states_provinces",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_1_states_provinces",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_admin_1_states_provinces_lakes",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_1_states_provinces_lakes",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_admin_1_states_provinces_lines",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_1_states_provinces_lines",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_admin_1_states_provinces_scale_rank",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_admin_1_states_provinces_scale_rank",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_110m_populated_places_simple",
+      "source": "naturalearth",
+      "source-layer": "ne_110m_populated_places_simple",
+      "type": "fill",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "ne_50m_admin_0_boundary_lines_disputed_areas",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_boundary_lines_disputed_areas",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_boundary_lines_land",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_boundary_lines_land",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_boundary_lines_maritime_indicator",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_boundary_lines_maritime_indicator",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_boundary_map_units",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_boundary_map_units",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_breakaway_disputed_areas",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_breakaway_disputed_areas",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_breakaway_disputed_areas_scale_rank",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_breakaway_disputed_areas_scale_rank",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_countries",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_countries",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_countries_lakes",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_countries_lakes",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_map_subunits",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_map_subunits",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_map_units",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_map_units",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_pacific_groupings",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_pacific_groupings",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_scale_rank",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_scale_rank",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_sovereignty",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_sovereignty",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_tiny_countries",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_tiny_countries",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_0_tiny_countries_scale_rank",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_0_tiny_countries_scale_rank",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_1_states_provinces",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_1_states_provinces",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_1_states_provinces_lakes",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_1_states_provinces_lakes",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_1_states_provinces_lines",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_1_states_provinces_lines",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_admin_1_states_provinces_scale_rank",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_admin_1_states_provinces_scale_rank",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_airports",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_airports",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_populated_places",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_populated_places",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_populated_places_simple",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_populated_places_simple",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_ports",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_ports",
+      "type": "fill"
+    },
+    {
+      "id": "ne_50m_urban_areas",
+      "source": "naturalearth",
+      "source-layer": "ne_50m_urban_areas",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_antarctic_claim_limit_lines",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_antarctic_claim_limit_lines",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_antarctic_claims",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_antarctic_claims",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_boundary_lines_disputed_areas",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_boundary_lines_disputed_areas",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_boundary_lines_land",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_boundary_lines_land",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_boundary_lines_map_units",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_boundary_lines_map_units",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_boundary_lines_maritime_indicator",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_boundary_lines_maritime_indicator",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_countries",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_countries",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_countries_lakes",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_countries_lakes",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_disputed_areas",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_disputed_areas",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_disputed_areas_scale_rank_minor_islands",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_disputed_areas_scale_rank_minor_islands",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_label_points",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_label_points",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_map_subunits",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_map_subunits",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_map_units",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_map_units",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_pacific_groupings",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_pacific_groupings",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_scale_rank",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_scale_rank",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_scale_rank_minor_islands",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_scale_rank_minor_islands",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_seams",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_seams",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_0_sovereignty",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_0_sovereignty",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_1_label_points",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_1_label_points",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_1_label_points_details",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_1_label_points_details",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_1_seams",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_1_seams",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_1_states_provinces",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_1_states_provinces",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_1_states_provinces_lakes",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_1_states_provinces_lakes",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_1_states_provinces_lines",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_1_states_provinces_lines",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_1_states_provinces_scale_rank",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_1_states_provinces_scale_rank",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_admin_1_states_provinces_scale_rank_minor_islands",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_admin_1_states_provinces_scale_rank_minor_islands",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_airports",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_airports",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_parks_and_protected_lands_area",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_parks_and_protected_lands_area",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_parks_and_protected_lands_line",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_parks_and_protected_lands_line",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_parks_and_protected_lands_point",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_parks_and_protected_lands_point",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_parks_and_protected_lands_scale_rank",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_parks_and_protected_lands_scale_rank",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_populated_places",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_populated_places",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_populated_places_simple",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_populated_places_simple",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_ports",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_ports",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_railroads",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_railroads",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_railroads_north_america",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_railroads_north_america",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_roads",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_roads",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_roads_north_america",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_roads_north_america",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_time_zones",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_time_zones",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_urban_areas",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_urban_areas",
+      "type": "fill"
+    },
+    {
+      "id": "ne_10m_urban_areas_landscan",
+      "source": "naturalearth",
+      "source-layer": "ne_10m_urban_areas_landscan",
+      "type": "fill"
     }
   ],
   "id": "tiny-tile-server"
