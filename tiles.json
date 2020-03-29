@@ -7,16 +7,12 @@
   "version": "2",
   "maxzoom": 5,
   "type": "overlay",
-  "center": [
-    139.691706,
-    35.689488,
-    10
-  ],
+  "center": [139.691706, 35.689488, 10],
   "attribution": "<a href=\"https://www.openstreetmap.org/copyright/\" target=\"_blank\">&copy; OpenStreetMap Contributors</a>",
   "id": "openmaptiles",
   "tilejson": "2.0.0",
   "tiles": [
-    "https://geolonia.github.io/tiny-tileserver/tiles/{z}/{x}/{y}.mvt"
+    "https://kamataryo.github.io/tiny-tileserver/tiles/{z}/{x}/{y}.mvt"
   ],
   "vector_layers": [
     {
